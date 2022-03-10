@@ -1,0 +1,329 @@
+.vip-page {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+
+  .vip-title {
+    margin-bottom: 20px;
+    // color: @primary-color;
+    font-size: 20px;
+  }
+
+  .vip-time {
+    margin-left: 20px;
+    font-size: 14px;
+    color: @primary-color;
+  }
+
+  .vip-item {
+    //width: 800px;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-template-rows: 100px 100px 0px;
+    grid-template-columns: 220px 220px 220px;
+    padding-left: 30px;
+    color: #666;
+    .wrapperCol {
+      flex: 0.9;
+      text-align: center;
+    }
+    .selectedIcon {
+      align-self: end;
+      font-size: 36px;
+      color: @primary-color;
+    }
+    .hideIcon {
+      font-size: 36px;
+      opacity: 0;
+    }
+
+    .price-item {
+      justify-content: center;
+      //width: 240px;
+      //height: 120px;
+      border: 2px solid #eeeeee;
+      border-radius: 10px;
+      cursor: pointer;
+
+      &.active {
+        border-color: @primary-color;
+      }
+    }
+
+    .price {
+      padding: 0 6px;
+      font-weight: 600;
+      font-size: 30px;
+    }
+  }
+
+  .wrap-pay {
+    padding-left: 20px;
+    //padding-top: 20px;
+    .ant-radio {
+      top: 0;
+    }
+
+    .ant-radio-group {
+      display: flex;
+      flex-direction: column;
+
+      .listRadio {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        font-size: 18px;
+        line-height: 50px;
+      }
+
+      .ant-radio-inner {
+        width: 20px;
+        height: 20px;
+
+        &:after {
+          width: 10px;
+          height: 10px;
+          top: 5px;
+          left: 4px;
+        }
+      }
+    }
+
+    .onPay {
+      margin-left: 25px;
+    }
+
+    .textLeft {
+      margin-left: 10px;
+    }
+  }
+
+  .wrap-qrCode {
+    padding: 0 46px;
+
+    .qucodeSize {
+      width: 135px !important;
+      height: 135px !important;
+    }
+
+    .notice {
+      //padding: 0 43px;
+      color: @cfc-dark-3;
+      font-size: 16px;
+
+      .aDefault {
+        color: @cfc-dark-3;
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+
+      .iconfont {
+        font-size: 12px;
+      }
+    }
+
+    .orderInfo {
+      height: 325px;
+      margin-top: 40px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px 0 rgba(29, 30, 40, 0.06);
+    }
+
+    .leftImage {
+      position: relative;
+      width: 290px;
+      text-align: right;
+
+      .timeCountCon {
+        position: absolute;
+        top: 121px;
+        right: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 19px;
+        color: @cfc-dark-1;
+        font-weight: bold;
+        font-size: 16px;
+        background: #ffd906;
+        border-radius: 10px;
+      }
+    }
+
+    .image {
+      width: 164px;
+      height: 182px;
+      //border-radius: 50%;
+    }
+
+    .orderNumber {
+      flex: 1;
+      padding: 0 30px;
+
+      .orderTitle {
+        margin-bottom: 10px;
+        color: @cfc-dark-1;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: Microsoft YaHei;
+      }
+    }
+
+    .orderPrice {
+      position: relative;
+      width: 316px;
+      height: 110px;
+      font-size: 20px;
+      //.moneyKey {
+      //
+      //}
+      .money {
+        position: absolute;
+        right: 0;
+        width: 302px;
+        height: 90px;
+        color: @cfc-secondary-2;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 90px;
+        text-align: center;
+        //background: url('../../assets/icons/rounLine.png');
+        //background-size: 100%;
+        //background: @linear-orderPay-pricebg;
+        border-radius: 44px 0 0 44px;
+      }
+
+      .moneyKey {
+        line-height: 40px;
+      }
+    }
+
+    .orderPay {
+      display: flex;
+      justify-content: space-between;
+      height: 392px;
+      margin-top: 28px;
+      padding: 47px 100px 60px 190px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px 0 rgba(29, 30, 40, 0.06);
+    }
+
+    .payLinkTitle {
+      color: @cfc-dark-1;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: Microsoft YaHei;
+    }
+
+    .qrCode {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 168px;
+      height: 168px;
+      margin: 10px auto 10px;
+      background: @primary-color;
+      border-radius: 20px;
+    }
+
+    .expiry {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      padding: 0 20px;
+      color: @commonFFF;
+      font-size: 18px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 18px;
+      cursor: pointer;
+    }
+  }
+}
+
+
+.pay {
+  display: grid;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-rows: 60px 60px 0;
+  grid-template-columns: 180px 180px 180px 180px;
+  padding-left: 30px;
+  .paySelect {
+    align-self: end;
+    font-size: 26px;
+    color: @primary-color;
+  }
+  .hideIcon {
+    font-size: 26px;
+    opacity: 0;
+  }
+  .wrap-type {
+    flex: 0.9;
+    text-align: center;
+  }
+  .pay-item {
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &.active {
+      border-color: @primary-color;
+    }
+  }
+
+  .pay-type {
+    padding: 0 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+
+
+  .pay-btn {
+    height: 96%;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: none;
+  }
+}
+
+.qrcodeSize{
+  width: 256px !important;
+  height: 256px !important;
+}
+.wechatPay {
+  color: #07c160;
+  font-size: 22px;
+}
+
+.alipayPay {
+  color: #18e;
+  font-size: 22px;
+}
+
+.balancePay {
+  color: #ffc731;
+  font-size: 24px;
+}
+.payText{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.ant-modal-footer{
+  display: flex;
+  justify-content: center;
+}

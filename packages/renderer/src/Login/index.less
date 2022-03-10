@@ -1,0 +1,401 @@
+@padding: 70px;
+@borderColor: #eee;
+
+#login {
+  //background: #999999;
+  //background: radial-gradient(ellipse at center, #0869ad 0%, black 100%);
+  height: 100%;
+  .logo {
+    color: white;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 @padding;
+    .logos {
+      flex: 0.3;
+      color: white;
+      cursor: pointer;
+      max-width: 180px;
+    }
+    .logo-1 {
+      margin-right: 10px;
+      max-width: 180px;
+    }
+    .logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 10px;
+      //background: linear-gradient(-135deg, #1de9b6 0%, #1dc4e9 100%);
+    }
+  }
+  main {
+    position: relative;
+    min-height: calc(100% - 100px);
+    margin-top: 30px;
+    padding: 0 @padding;
+
+    .sound-container {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      z-index: 3;
+      margin-top: -70px;
+      margin-left: -70px;
+    }
+    .sound-container.two {
+      top: 70%;
+      left: 50%;
+    }
+
+    .sound {
+      position: relative;
+      z-index: 2;
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      overflow: hidden;
+      list-style: none;
+      border-radius: 50%;
+    }
+    .sound li {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      width: 0%;
+      height: 0%;
+      margin: auto;
+      background: @primary-color;
+      border-radius: 50%;
+    }
+    .sound li:nth-child(1) {
+      opacity: 0.2;
+      -webkit-animation: zoom1 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      animation: zoom1 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    }
+    .sound li:nth-child(2) {
+      opacity: 0.3;
+      -webkit-animation: zoom2 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      animation: zoom2 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+    .sound li:nth-child(3) {
+      opacity: 0.5;
+      -webkit-animation: zoom3 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      animation: zoom3 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      -webkit-animation-delay: 0.6s;
+      animation-delay: 0.6s;
+    }
+    .sound li:nth-child(4) {
+      opacity: 0.6;
+      -webkit-animation: zoom4 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      animation: zoom4 6s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+      -webkit-animation-delay: 0.9s;
+      animation-delay: 0.9s;
+    }
+
+    @-webkit-keyframes zoom1 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 100%;
+        height: 100%;
+      }
+      50% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    @keyframes zoom1 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 100%;
+        height: 100%;
+      }
+      50% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+    @-webkit-keyframes zoom2 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 75%;
+        height: 75%;
+      }
+      50% {
+        width: 75%;
+        height: 75%;
+        opacity: 0;
+      }
+      100% {
+        width: 75%;
+        height: 75%;
+        opacity: 0;
+      }
+    }
+    @keyframes zoom2 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 75%;
+        height: 75%;
+      }
+      50% {
+        width: 75%;
+        height: 75%;
+        opacity: 0;
+      }
+      100% {
+        width: 75%;
+        height: 75%;
+        opacity: 0;
+      }
+    }
+    @-webkit-keyframes zoom3 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 50%;
+        height: 50%;
+      }
+      50% {
+        width: 50%;
+        height: 50%;
+        opacity: 0;
+      }
+      100% {
+        width: 50%;
+        height: 50%;
+        opacity: 0;
+      }
+    }
+    @keyframes zoom3 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 50%;
+        height: 50%;
+      }
+      50% {
+        width: 50%;
+        height: 50%;
+        opacity: 0;
+      }
+      100% {
+        width: 50%;
+        height: 50%;
+        opacity: 0;
+      }
+    }
+    @-webkit-keyframes zoom4 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 25%;
+        height: 25%;
+      }
+      50% {
+        width: 25%;
+        height: 25%;
+        opacity: 0;
+      }
+      100% {
+        width: 25%;
+        height: 25%;
+        opacity: 0;
+      }
+    }
+    @keyframes zoom4 {
+      0% {
+        width: 0%;
+        height: 0%;
+      }
+      35% {
+        width: 25%;
+        height: 25%;
+      }
+      50% {
+        width: 25%;
+        height: 25%;
+        opacity: 0;
+      }
+      100% {
+        width: 25%;
+        height: 25%;
+        opacity: 0;
+      }
+    }
+  }
+  .nav {
+    .nav-item {
+      padding: 0 10px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .loginBox {
+    position: absolute;
+    top: 10%;
+    right: 15%;
+    z-index: 10;
+    width: 500PX;
+    background: white;
+    border: 1px solid #999;
+    //margin-left: auto;
+    //margin-right: 0;
+    border-radius: 5px;
+    .ant-tabs {
+      line-height: 30px;
+    }
+    .ant-tabs-nav-list {
+      display: flex;
+      flex: 0.8;
+      justify-content: space-around;
+    }
+    .ant-tabs-tab {
+      //margin-right: 50px;
+      //margin-left:50px;
+      padding: 10px 0;
+      text-align: center;
+      .ant-tabs-tab-btn {
+        font-weight: 600;
+      }
+    }
+    .account-login {
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      &:hover {
+        color: @primary-color;
+      }
+    }
+    .ant-form {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+    .ant-form-item-has-error :not(.ant-input-disabled).ant-input:focus {
+      background: none;
+      box-shadow: none;
+    }
+    .ant-form-item-has-error :not(.ant-input-disabled).ant-input:hover {
+      background: none;
+    }
+    .ant-form-large .ant-form-item-control-input {
+      min-height: auto;
+    }
+    .checkMe {
+      .ant-checkbox {
+        top: 0;
+      }
+      .ant-checkbox-inner {
+        border-radius: 0;
+      }
+      .ant-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+      }
+    }
+    .item-input {
+      .ant-input {
+        border-radius: 0;
+      }
+    }
+  }
+  .loginHeader {
+    height: 40px;
+    padding: 0 20px;
+    line-height: 60px;
+  }
+  .header-left {
+    font-weight: 600;
+    .iconfont {
+      margin-right: 10px;
+    }
+  }
+  .wechat-tab {
+    flex-direction: column;
+  }
+  .qq-tab {
+    min-height: 200px;
+  }
+  .title,
+  .wechat-footer {
+    height: 50px;
+    line-height: 40px;
+  }
+  .qrCode {
+    position: relative;
+    width: 192px;
+    height: 192px;
+    padding: 5px;
+    border: 1px solid @borderColor;
+    border-radius: 10px;
+    img {
+      max-width: 100%;
+    }
+    .refresh {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 192px;
+      color: white;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: orangered;
+        background: #e1e1e1;
+        cursor: pointer;
+        content: '二维码已过期，点击刷新!';
+      }
+    }
+  }
+  .wechat-footer {
+  }
+}

@@ -1,0 +1,86 @@
+.accounting {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  .accounting-record {
+    .memory-item {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      border-right: 1px solid @borderColor;
+    }
+    .memory-item:nth-last-child(1) {
+      border-right: 0;
+    }
+    .memory-number {
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 70px;
+    }
+    .account-rule {
+      margin-top: 20px;
+      li {
+        color: #666;
+        line-height: 35px;
+      }
+    }
+    .record {
+      .table-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  //  binds
+  .binds {
+    height: 400px;
+    .bind-list {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      height: 200px;
+      margin: 30px;
+      .bind-item {
+        flex-direction: column;
+        justify-content: center;
+        width: 240px;
+        height: 140px;
+        //flex: 1;
+        margin-right: 30px;
+        color: #999;
+        font-size: 20px;
+        border: 1px dashed #ccc;
+        border-radius: 10px;
+        .ant-btn,
+        .unit {
+          margin-top: 10px;
+          opacity: 0;
+          transition: all 0.3s ease-in-out;
+        }
+        .iconfont {
+          margin-right: 5px;
+          font-size: 24px;
+        }
+        &:hover {
+          .ant-btn {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+.withdrawal {
+  .listRadio {
+    .alipayPay {
+      color: #1890ff;
+      font-size:20px;
+    }
+    .balancePay {
+      font-size:20px;
+      color: @primary-color;
+    }
+  }
+}
